@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Encuesta de Satisfacción</h1>
+    <form action="#" method="POST">
+        <!-- Pregunta de texto -->
+        <label for="nombre">¿Cuál es tu nombre?</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <!-- Pregunta de opción múltiple -->
+        <label>¿Cómo calificarías nuestra página web?</label><br>
+        <input type="radio" id="excelente" name="calificacion" value="excelente" required>
+        <label for="excelente">Excelente</label><br>
+        <input type="radio" id="buena" name="calificacion" value="buena">
+        <label for="buena">Buena</label><br>
+        <input type="radio" id="regular" name="calificacion" value="regular">
+        <label for="regular">Regular</label><br>
+        <input type="radio" id="mala" name="calificacion" value="mala">
+        <label for="mala">Mala</label><br>
+
+        <!-- Pregunta de selección -->
+        <label for="pais">¿De qué país nos visitas?</label>
+        <select id="pais" name="pais" required>
+            <option value="colombia">Colombia</option>
+            <option value="venezuela">Venezuela</option>
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+            <option value="otro">Otro</option>
+        </select>
+
+        <!-- Pregunta abierta -->
+        <label for="comentarios">Comentarios adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+
+        <!-- Botón de envío -->
+        <input type="submit" value="Enviar Encuesta">
+    </form>
+</body>
+</html>
